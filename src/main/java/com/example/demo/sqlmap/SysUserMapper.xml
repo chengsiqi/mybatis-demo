@@ -373,4 +373,14 @@
     <include refid="Base_Column_List" />
     from sys_user
   </select>
+
+  <!--
+  这是一个普通的查找全部记录的查询语句, 并不需要写分页SQL, 分页插件会拦截查询请求,
+  并读取前台传来的分页查询参数重新生成分页查询语句
+  -->
+  <select id="selectPage" resultMap="BaseResultMap" >
+    select
+    <include refid="Base_Column_List" />
+    from sys_user
+  </select>
 </mapper>

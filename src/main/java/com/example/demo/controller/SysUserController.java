@@ -1,11 +1,9 @@
 package com.example.demo.controller;
 
+import com.example.demo.page.PageRequest;
 import com.example.demo.service.SysUserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @author 程思琦
@@ -27,5 +25,10 @@ public class SysUserController {
     @GetMapping("findAll")
     public Object findAll(){
         return sysUserService.selectAll();
+    }
+
+    @PostMapping("findPage")
+    public Object findPage(PageRequest pageRequest){
+        return sysUserService.findPage(pageRequest);
     }
 }

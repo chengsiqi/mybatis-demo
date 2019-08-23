@@ -41,4 +41,13 @@ public interface SysUserMapper {
      * @return List<SysUser>
      */
     List<SysUser> selectAll();
+
+    /**
+     * 分页查询用户信息
+     *
+     * @author csq
+     * @date 9:32 2019/8/23
+     * @return List<SysUser>
+     */
+    List<SysUser> selectPage();
 }
