@@ -31,6 +31,12 @@
 			<scope>test</scope>
 		</dependency>
 
+		<!--<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-configuration-processor</artifactId>
+			<optional>true</optional>
+		</dependency>-->
+
 		<!-- web -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -75,6 +81,36 @@
 			<version>1.2.5</version>
 		</dependency>
 
+		<!--
+			数据库连接池负责分配、管理和释放数据库连接, 它允许应用程序重复使用一个现有的数据库连接, 而不是再重新建立一个;
+			释放空闲时间超过最大空闲时间的数据库连接来避免因为没有释放数据库连接而引起的数据库连接遗漏.
+			通过数据库连接池能明显提高对数据库操作的性能。
+
+			常用数据库连接池有DBCP、C3P0等。
+
+			Spring Boot 默认提供了若干种可用的连接池,默认的数据源是: org.apache.tomcat.jdbc.pool.DataSource.
+			而Druid 是阿里系提供的一个开源连接池, 除连接池之外, Druid还提供了非常优秀的数据库监控和扩展功能。
+
+			Druid介绍
+			Druid是阿里开源的一个JDBC应用组件, 其包括三部分：
+				* DruidDriver: 代理Driver, 能够提供基于Filter-Chain模式的插件体系
+				* DruidDataSource: 高效可管理的数据库连接池
+				* SQLParser: 实用的SQL语法分析
+
+			Druid Spring Boot Starter 用于帮助你在Spring Boot项目中轻松集成Druid数据库连接池和监控。
+		 -->
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>druid-spring-boot-starter</artifactId>
+			<version>1.1.17</version>
+		</dependency>
+
+		<!-- log4j -->
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.17</version>
+		</dependency>
 	</dependencies>
 
 	<build>
